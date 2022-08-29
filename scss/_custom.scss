@@ -1,0 +1,29 @@
+@use './variables' as *;
+
+
+.circle{
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+.light{
+    .circle{
+        border-color: black;
+    }
+}
+.dark{
+    .circle{
+        border-color: white;
+    }
+}

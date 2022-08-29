@@ -1,0 +1,61 @@
+@use './variables' as *;
+
+
+.light{
+    background-color: white;
+    background-image: url(../src/images/bg-desktop-light.jpg);
+
+    .container{
+
+        header{
+            h1{
+                color: white;
+            }
+        }
+
+
+
+
+        .input-sec{
+            background-color: white;
+            .todo-input{
+                caret-color: blue;
+                background-color: transparent;
+            }
+        }
+
+
+        .todo-body-footer{
+            background-color: white;
+            .todo-body{
+                .todo-item{
+                    border-bottom-color: black;
+                    color: black;
+                }
+
+                .footer{
+                    color: black;
+                    border-top-color: black;
+                }
+            }
+        }
+
+
+
+
+.drag-mes{
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+    }
+}

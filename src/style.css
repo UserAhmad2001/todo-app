@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+*, :root {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Josefin Sans", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+html, body, #root, .dark, .light {
+  width: 100%;
+  height: 100%;
+}
+
+.light, .dark {
+  background-position: top;
+  background-size: 100% 40%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+}
+.light .container, .dark .container {
+  width: 90%;
+  max-width: 33rem;
+  margin-top: 4rem;
+}
+.light .container header, .dark .container header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+.light .container header h1, .dark .container header h1 {
+  margin-right: auto;
+  font-size: 1.8rem;
+  letter-spacing: 0.7rem;
+}
+.light .container header img, .dark .container header img {
+  margin-left: auto;
+  object-fit: contain;
+  cursor: pointer;
+}
+.light .container .input-sec, .dark .container .input-sec {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  padding-block: 1rem;
+}
+.light .container .input-sec .circle, .dark .container .input-sec .circle {
+  margin-inline: 1rem;
+}
+.light .container .input-sec .todo-input, .dark .container .input-sec .todo-input {
+  flex-basis: 95%;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+}
+.light .container .input-sec .todo-input:focus, .dark .container .input-sec .todo-input:focus {
+  border: none;
+  outline: none;
+}
+
+.light {
+  background-color: white;
+  background-image: url(../src/images/bg-desktop-light.jpg);
+}
+.light .container header h1 {
+  color: white;
+}
+.light .container .input-sec {
+  background-color: white;
+}
+.light .container .input-sec .todo-input {
+  caret-color: blue;
+  background-color: transparent;
+}
+.light .container .todo-body-footer {
+  background-color: white;
+}
+.light .container .todo-body-footer .todo-body .todo-item {
+  border-bottom-color: black;
+  color: black;
+}
+.light .container .todo-body-footer .todo-body .footer {
+  color: black;
+  border-top-color: black;
+}
+.light .container .drag-mes {
+  color: black;
+}
+
+.circle {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.light .circle {
+  border-color: black;
+}
+
+.dark .circle {
+  border-color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

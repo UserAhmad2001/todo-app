@@ -1,0 +1,69 @@
+
+
+
+.light,.dark{
+    background-position: top;
+    background-size: 100% 40%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+
+    
+    .container{
+        width: 90%;
+        max-width: 33rem;
+        margin-top: 4rem;
+
+
+        header{
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 2rem;
+            h1{
+                margin-right: auto;
+                font-size: 1.8rem;
+                letter-spacing: .7rem;
+            }
+            img{
+                margin-left: auto;
+                object-fit: contain;
+                cursor: pointer;
+            }
+        }
+
+
+        .input-sec{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 1rem;
+            border-radius: .3rem;
+            padding-block: 1rem;
+
+            .circle{
+                margin-inline: 1rem;
+            }
+
+            .todo-input{
+                flex-basis: 95%;
+                font-size: 1.1rem;
+                border: none;
+                outline: none;
+                &:focus{
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+    }
+}
