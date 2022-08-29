@@ -1,5 +1,4 @@
 import Cross from './images/icon-cross.svg'
-import {useState} from 'react'
 
 function TodoItem(props){
     function removeItem(){
@@ -19,7 +18,7 @@ function TodoItem(props){
 
     return (
         <div className="todo-item">
-            <div className={props.todo.checked ? "circle checked":"circle"} onClick={checkTodo}></div>
+            <div className={props.todo.checked ? 'checked' : 'circle'} onClick={checkTodo}></div>
             <div className="todo">{props.todo.value}</div>
             <img src={Cross} 
             alt="cross todo" 

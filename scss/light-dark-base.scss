@@ -41,7 +41,7 @@
             border-radius: .3rem;
             padding-block: 1rem;
 
-            .circle{
+            .circle,.checked{
                 margin-inline: 1rem;
             }
 
@@ -58,11 +58,97 @@
         }
 
 
+        .todo-body-footer{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            border-radius: .3rem;
+            box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
+            
+            
+            .todo-body{
+                height: 18rem;
+                overflow: auto;
+
+                .todo-item{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding-block: 1rem;
+                    border-bottom: 1px solid black;
+
+                    .todo{
+                        font-size: 1.1rem;
+                        flex-basis: 90%;
+                        text-align: left;
+                    }
+
+                    .circle,.checked{
+                        margin-inline: 1rem;
+                    }
+
+                    .cross{
+                        visibility: hidden;
+                        object-fit: contain;
+                        margin-inline: 1rem;
+                        cursor: pointer;
+                    }
+
+                    &:hover .cross{
+                        visibility: visible;
+                    }
+                }
+            }
 
 
 
 
+            .footer{
+                flex-basis: 10%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+                border-top: 1px solid black;
+                padding-block: 1rem;
 
+                .filter{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    p{
+                        margin-inline: .7rem;
+                        font-size: .8rem;
+                        cursor: pointer;
+                    }
+                }
+
+
+                .clear-completed{
+                    margin-right: 1rem;
+                    margin-left: auto;
+                    font-size: .8rem;
+                    cursor: pointer;
+                }
+
+                .items-left{
+                    margin-right: auto;
+                    margin-left: 1rem;
+                    font-size: .8rem;
+                    cursor: pointer;
+                }
+
+
+            }
+        }
+
+
+
+        .drag-mes{
+            margin-top: 2.5rem;
+            text-align: center;
+            font-size: .7rem;
+        }
 
 
     }

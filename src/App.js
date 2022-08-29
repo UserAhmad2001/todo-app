@@ -6,7 +6,8 @@ import {useState} from 'react'
 function App() {
   const [nightMode, setNightMode] = useState(false)
   const [todos, setTodos] = useState([])
-  var parsedTodos = todos.map((todo, i)=>{
+  var filteredTodos = todos
+  var parsedTodos = filteredTodos.map((todo, i)=>{
     return (
       <TodoItem todo={todo} key={i} index={i} todos={todos} setTodos={setTodos} />
     )
@@ -18,6 +19,19 @@ function App() {
       )
       ev.target.value = ''
     }
+  }
+  function allBtn(){
+    filteredTodos = todos
+  }
+  function completedBtn(){
+    filteredTodos = todos.filter((value,index,array)=>{
+      return value.checked === true
+    })
+  }
+  function activeBtn(){
+    filteredTodos = todos.filter((value,index,array)=>{
+      return value.checked !== true
+    })
   }
   
   return (
@@ -52,9 +66,9 @@ function App() {
           5 items left
         </div>
         <div className="filter">
-          <p>All</p>
-          <p>Active</p>
-          <p>Completed</p>
+          <p onClick={allBtn}>All</p>
+          <p onClick={activeBtn}>Active</p>
+          <p onClick={completedBtn}>Completed</p>
         </div>
         <div className="clear-completed" onClick={()=>{setTodos([])}}>
           Clear Completed
