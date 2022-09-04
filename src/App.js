@@ -78,7 +78,6 @@ useEffect(()=>{
           <h1>TODO</h1>
           <img onClick={()=>{
             setNightMode(!nightMode) 
-            console.log(nightMode)
           }}
           src={nightMode ? SunImage : MoonImage} 
           alt="theme changer " 
@@ -106,7 +105,7 @@ useEffect(()=>{
     </div>
   )}
   
-</Droppable>;
+</Droppable>
   </div>
     </DragDropContext>
 

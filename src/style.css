@@ -83,7 +83,6 @@ html, body, #root, .dark, .light {
   font-size: 1.1rem;
   flex-basis: 80%;
   text-align: left;
-  cursor: pointer;
 }
 .light .container .todo-body-footer .todo-body .todo-item .circle, .light .container .todo-body-footer .todo-body .todo-item .checked, .dark .container .todo-body-footer .todo-body .todo-item .circle, .dark .container .todo-body-footer .todo-body .todo-item .checked {
   margin-inline: 1rem;
@@ -221,41 +220,70 @@ html, body, #root, .dark, .light {
   height: 1.2rem;
   border-radius: 50%;
   cursor: pointer;
-  border: 1px solid;
   position: relative;
 }
-.circle img {
-  display: none;
+.circle::before {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
 }
 
 .checked {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   width: 1.2rem;
   height: 1.2rem;
   border-radius: 50%;
-  background: linear-gradient(275deg, hsl(192deg, 100%, 67%), hsl(280deg, 87%, 65%));
   cursor: pointer;
-  border: 1px solid;
+  background: linear-gradient(275deg, hsl(192deg, 100%, 67%), hsl(280deg, 87%, 65%));
 }
-.checked img {
-  width: 50%;
-  height: 50%;
-  object-fit: contain;
+.checked::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  background: url(../src/images/icon-check.svg);
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.light .container .todo-body-footer .todo-body .todo-item .circle, .light .container .todo-body-footer .todo-body .todo-item .checked {
-  border-color: black;
-}
-
-.dark > .container > .todo-body-footer > .todo-body > .todo-item .checked, .dark > .container > .todo-body-footer > .todo-body > .todo-item .circle {
-  border-color: white;
-  outline: white;
-}
-.dark > .container > .todo-body-footer > .todo-body > .todo-item .checked + .todo {
+.dark .container .todo-body-footer .todo-body .todo-item .checked + .todo {
   text-decoration: line-through;
   color: hsl(233deg, 14%, 35%);
+}
+
+.light .circle {
+  background: hsl(233deg, 11%, 84%);
+}
+.light .circle:hover {
+  background: linear-gradient(275deg, hsl(192deg, 100%, 67%), hsl(280deg, 87%, 65%));
+}
+.light .circle::before {
+  background: white;
+}
+
+.dark .circle {
+  background: hsl(234deg, 39%, 85%);
+}
+.dark .circle:hover {
+  background: linear-gradient(275deg, hsl(192deg, 100%, 67%), hsl(280deg, 87%, 65%));
+}
+.dark .circle::before {
+  background: hsl(235deg, 24%, 19%);
 }
 
 /*# sourceMappingURL=style.css.map */

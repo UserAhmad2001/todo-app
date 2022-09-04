@@ -6,29 +6,50 @@
     height: 1.2rem;
     border-radius: 50%;
     cursor: pointer;
-    border: 1px solid;
     position: relative;
+    
 
-    img{
-        display: none;
+
+
+    &::before{
+        content: '';
+        position: absolute;
+        width: 85%;
+        height: 85%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
     }
+
 }
 
 .checked{
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     width: 1.2rem;
     height: 1.2rem;
     border-radius: 50%;
-    background: $checked-bg;
     cursor: pointer;
-    border: 1px solid;
+    background: $checked-bg;
 
-    img{
-        width: 50%;
-        height: 50%;
-        object-fit: contain;
+    &::before{
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 60%;
+        background: url(../src/images/icon-check.svg);
+        background-size: 60%;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
 
@@ -37,18 +58,39 @@
 
 
 
-.light .container .todo-body-footer .todo-body .todo-item{
-    .circle,.checked{
-        border-color: black;
-    }
-}
-.dark > .container > .todo-body-footer > .todo-body > .todo-item{
-    .checked,.circle{
-        border-color: white ;
-        outline: white;
-    }
+.dark .container .todo-body-footer .todo-body .todo-item{
     .checked+.todo{
         text-decoration: line-through;
         color: $dark-grayish-blue-4;
     }
+}
+
+
+.light {
+    & .circle{
+        &:hover{
+            background: $checked-bg;
+        }
+        background: $light-grayish-blue-2;
+        &::before{
+            background: white;
+        }
+    }
+    
+}
+
+
+
+.dark {
+    & .circle{
+        &:hover{
+            background: $checked-bg;
+        }
+            background: $light-grayish-blue-3;
+        &::before{
+            background: $dark-desaturated-blue;
+        }
+    }
+
+
 }
