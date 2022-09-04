@@ -39,13 +39,14 @@
             width: 100%;
             margin-bottom: 1rem;
             border-radius: .3rem;
-            padding-block: 1rem;
-
+            
+            
             .circle,.checked{
                 margin-inline: 1rem;
             }
 
             .todo-input{
+                padding-block: 1rem;
                 flex-basis: 95%;
                 font-size: 1.1rem;
                 border: none;
@@ -76,11 +77,14 @@
                     align-items: center;
                     padding-block: 1rem;
                     border-bottom: 1px solid black;
+                    position: relative;
 
                     .todo{
                         font-size: 1.1rem;
-                        flex-basis: 90%;
+                        flex-basis: 80%;
                         text-align: left;
+                        cursor: pointer;
+                        
                     }
 
                     .circle,.checked{

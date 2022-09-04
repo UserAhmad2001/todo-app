@@ -2,25 +2,34 @@
 
 
 .circle{
-    width: 1rem;
-    height: 1rem;
-    border: 1px solid black;
+    width: 1.2rem;
+    height: 1.2rem;
     border-radius: 50%;
     cursor: pointer;
-}
+    border: 1px solid;
+    position: relative;
 
+    img{
+        display: none;
+    }
+}
 
 .checked{
-    width: 1rem;
-    height: 1rem;
-    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.2rem;
+    height: 1.2rem;
     border-radius: 50%;
     background: $checked-bg;
-    background-image: url(../src/images/icon-check.svg);
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: center;
     cursor: pointer;
+    border: 1px solid;
+
+    img{
+        width: 50%;
+        height: 50%;
+        object-fit: contain;
+    }
 }
 
 
@@ -28,13 +37,18 @@
 
 
 
-.light{
+.light .container .todo-body-footer .todo-body .todo-item{
     .circle,.checked{
         border-color: black;
     }
 }
-.dark{
-    .circle,.checked{
-        border-color: white;
+.dark > .container > .todo-body-footer > .todo-body > .todo-item{
+    .checked,.circle{
+        border-color: white ;
+        outline: white;
+    }
+    .checked+.todo{
+        text-decoration: line-through;
+        color: $dark-grayish-blue-4;
     }
 }

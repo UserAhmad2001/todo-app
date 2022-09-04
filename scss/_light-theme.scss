@@ -2,7 +2,7 @@
 
 
 .light{
-    background-color: white;
+    background-color: $light-gray;
     background-image: url(../src/images/bg-desktop-light.jpg);
 
     .container{
@@ -17,25 +17,44 @@
 
 
         .input-sec{
-            background-color: white;
+            background-color: $light-gray;
             .todo-input{
-                caret-color: blue;
+                caret-color: $bright-blue;
+                color: $dark-grayish-blue-2;
                 background-color: transparent;
             }
         }
 
 
         .todo-body-footer{
-            background-color: white;
+            background-color: $light-gray;
             .todo-body{
                 .todo-item{
-                    border-bottom-color: black;
-                    color: black;
+                    border-bottom-color: $light-grayish-blue-1;
+                    color: $dark-grayish-blue-2;
                 }
 
-                .footer{
-                    color: black;
-                    border-top-color: black;
+                .checked+.todo{
+                    text-decoration: line-through;
+                    color: $light-grayish-blue-2;
+                }
+
+            }
+            .footer{
+                color: $dark-grayish-blue-1;
+                border-top-color: $light-grayish-blue-1;
+
+                .filter {
+                    p:focus{
+                        color: $bright-blue;
+                    }
+                    p:hover{
+                        color: $dark-grayish-blue-2;
+                    }
+                }
+
+                .clear-completed:hover{
+                    color: $dark-grayish-blue-2;
                 }
             }
         }
@@ -43,9 +62,9 @@
 
 
 
-.drag-mes{
-    color: black;
-}
+            .drag-mes{
+                color: $dark-grayish-blue-1;
+            }
 
 
 

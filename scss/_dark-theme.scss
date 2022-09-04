@@ -1,0 +1,75 @@
+@use './variables' as *;
+
+
+.dark{
+    background-color: $dark-blue;
+    background-image: url(../src/images/bg-desktop-dark.jpg);
+
+    .container{
+
+        header{
+            h1{
+                color: white;
+            }
+        }
+
+
+
+
+        .input-sec{
+            background-color: $dark-desaturated-blue;
+            .todo-input{
+                caret-color: $bright-blue;
+                color: $dark-grayish-blue-3;
+                background-color: transparent;
+            }
+        }
+
+
+        .todo-body-footer{
+            background-color: $dark-desaturated-blue;
+            .todo-body{
+                .todo-item{
+                    border-bottom-color: $dark-grayish-blue-5;
+                    color: $light-grayish-blue-3;
+                }
+
+            }
+            .footer{
+                color: $dark-grayish-blue-4;
+                border-top-color: $dark-grayish-blue-5;
+
+                .filter {
+                    p:focus{
+                        color: $bright-blue;
+                    }
+                    p:hover{
+                        color: $light-grayish-blue-3-hover;
+                    }
+                }
+
+                .clear-completed:hover{
+                    color: $light-grayish-blue-3-hover;
+                }
+            }
+        }
+
+
+
+
+            .drag-mes{
+                color: $dark-grayish-blue-4;
+            }
+
+
+
+
+
+
+
+
+
+
+
+    }
+}
